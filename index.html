@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Видео-разбор для таргетологов — Рафаэль Юсупов</title>
+<meta name="description" content="Как таргетологу перестать выживать на фрилансе и выйти на доход от $3000 в месяц. Видео-разбор Рафаэля Юсупова.">
+<meta name="theme-color" content="#0E0C0A">
+<meta property="og:title" content="Как таргетологу перестать выживать на фрилансе">
+<meta property="og:description" content="Видео-разбор: фундамент проекта, стратегия и система привлечения клиентов. 16+ кейсов учеников.">
+<meta property="og:image" content="https://i.ytimg.com/vi/IuOtyUV68fs/maxresdefault.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','710581470748709');
+fbq('track','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=710581470748709&ev=PageView&noscript=1" alt=""></noscript>
+
+<style>
+:root{
+  --bg:#0E0C0A; --bg2:#17120E; --card:#241D17; --line:#3A3129;
+  --white:#FFFFFF; --muted:#B5ADA3; --dim:#7A7066;
+  --yellow:#F7F46A; --ink:#111111;
+  --head:'Oswald',Arial,sans-serif; --body:'Montserrat',Arial,sans-serif;
+  --unlock:90; /* секунд до открытия кнопки */
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{background:var(--bg);color:var(--white);font-family:var(--body);-webkit-font-smoothing:antialiased;
+  background-image:radial-gradient(ellipse 90% 60% at 50% 0%,rgba(247,244,106,.06),transparent 70%),
+                   radial-gradient(ellipse 80% 60% at 50% 110%,rgba(120,70,30,.18),transparent 70%);
+  background-attachment:fixed}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+a{color:inherit}
+
+.screen{min-height:100vh;min-height:100dvh;display:none;flex-direction:column;align-items:center;justify-content:center;
+  padding:48px 20px;text-align:center}
+.screen.active{display:flex;animation:in .45s ease both}
+@keyframes in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+.eyebrow{font-family:var(--head);font-weight:500;font-size:15px;letter-spacing:2px;color:var(--yellow);text-transform:uppercase}
+.h-xl{font-family:var(--head);font-weight:700;text-transform:uppercase;line-height:1.02;
+  font-size:clamp(44px,9vw,120px);margin-top:14px;animation:pop .5s cubic-bezier(.2,1.4,.4,1) both .1s}
+.h-l{font-family:var(--head);font-weight:700;text-transform:uppercase;line-height:1.05;
+  font-size:clamp(34px,6.4vw,84px);margin-top:14px;max-width:1000px;animation:pop .5s cubic-bezier(.2,1.4,.4,1) both .1s}
+@keyframes pop{from{opacity:0;transform:scale(.85)}to{opacity:1;transform:none}}
+.y{color:var(--yellow)}
+.sub{font-size:clamp(16px,2vw,20px);line-height:1.5;color:var(--muted);margin-top:18px;max-width:620px}
+
+.answers{display:flex;gap:14px;margin-top:40px;flex-wrap:wrap;justify-content:center;width:100%;max-width:520px}
+.btn{flex:1 1 200px;min-height:64px;padding:16px 28px;border-radius:12px;font-family:var(--head);font-weight:600;
+  font-size:24px;letter-spacing:1px;text-transform:uppercase;transition:transform .15s ease,box-shadow .2s ease,background .2s}
+.btn:active{transform:scale(.97)}
+.btn-yes{background:var(--yellow);color:var(--ink);box-shadow:0 10px 40px rgba(247,244,106,.25)}
+.btn-yes:hover{box-shadow:0 14px 50px rgba(247,244,106,.4)}
+.btn-no{background:var(--card);color:var(--white);border:1px solid var(--line)}
+.btn-no:hover{background:#2E251D}
+.btn:focus-visible,.cta:focus-visible,.link:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+
+.steps{display:flex;gap:8px;margin-bottom:28px}
+.steps i{width:28px;height:4px;border-radius:2px;background:var(--line)}
+.steps i.on{background:var(--yellow)}
+
+.link{margin-top:28px;font-size:15px;color:var(--muted);text-decoration:underline;text-underline-offset:4px}
+
+/* ---------- video page ---------- */
+#video{justify-content:flex-start;padding-top:40px}
+.wrap{width:100%;max-width:980px;text-align:left}
+.vhead{text-align:left}
+.vhead .h-l{margin-top:10px;font-size:clamp(32px,5.4vw,64px)}
+.player{position:relative;width:100%;aspect-ratio:16/9;margin-top:28px;border-radius:16px;overflow:hidden;
+  background:#000;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 0 1px rgba(247,244,106,.12)}
+.player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+.about{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}
+.about div{background:var(--card);border-radius:10px;padding:18px 18px 20px}
+.about b{display:block;font-family:var(--head);font-weight:500;font-size:14px;letter-spacing:2px;color:var(--yellow)}
+.about p{margin-top:8px;font-size:15px;line-height:1.45;color:#D9D2C8}
+
+.cta-box{margin-top:32px;text-align:center}
+.cta{display:flex;align-items:center;justify-content:center;gap:12px;width:100%;min-height:76px;padding:18px 24px;border-radius:14px;
+  font-family:var(--head);font-weight:700;font-size:clamp(22px,3.4vw,30px);letter-spacing:1px;text-transform:uppercase;text-decoration:none;
+  background:#1C1712;color:var(--dim);border:1px solid var(--line);cursor:not-allowed;transition:all .5s ease}
+.cta svg{width:26px;height:26px;flex:none}
+.cta .ic-open{display:none}
+.cta.open{background:var(--yellow);color:var(--ink);border-color:var(--yellow);cursor:pointer;
+  box-shadow:0 0 0 0 rgba(247,244,106,.6);animation:glow 2s ease-in-out infinite}
+.cta.open .ic-lock{display:none}.cta.open .ic-open{display:block}
+.cta.open:hover{transform:translateY(-2px)}
+@keyframes glow{0%,100%{box-shadow:0 0 0 0 rgba(247,244,106,.55),0 14px 50px rgba(247,244,106,.25)}
+  50%{box-shadow:0 0 0 14px rgba(247,244,106,0),0 14px 60px rgba(247,244,106,.4)}}
+.cta.flash{animation:flash .7s ease 1,glow 2s ease-in-out infinite .7s}
+@keyframes flash{0%{transform:scale(.96)}50%{transform:scale(1.04)}100%{transform:scale(1)}}
+.timer{margin-top:14px;font-size:15px;color:var(--muted)}
+.timer b{font-family:var(--head);font-weight:600;font-size:18px;color:var(--white);letter-spacing:1px}
+.bar{height:4px;border-radius:2px;background:var(--line);margin:12px auto 0;max-width:360px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--yellow);transition:width 1s linear}
+
+.benefits{display:none;margin-top:28px;text-align:left;background:var(--card);border-radius:14px;padding:26px 24px;border:1px solid rgba(247,244,106,.25)}
+.benefits.show{display:block;animation:in .5s ease both}
+.benefits h3{font-family:var(--head);font-weight:700;font-size:clamp(24px,3.2vw,32px);text-transform:uppercase;line-height:1.1}
+.free{display:inline-block;margin-left:8px;padding:2px 10px;border-radius:6px;background:var(--yellow);color:var(--ink);font-size:.7em;vertical-align:middle}
+.benefits ul{list-style:none;margin-top:16px;display:grid;gap:12px}
+.benefits li{position:relative;padding-left:30px;font-size:16px;line-height:1.5;color:#D9D2C8}
+.benefits li::before{content:"";position:absolute;left:0;top:7px;width:16px;height:9px;border-left:3px solid var(--yellow);border-bottom:3px solid var(--yellow);transform:rotate(-45deg)}
+.benefits .note{margin-top:16px;font-size:14px;color:var(--muted)}
+.help{margin-top:22px;text-align:center}
+.help p{font-size:14px;color:var(--muted)}
+.tg{display:inline-flex;align-items:center;gap:10px;margin-top:10px;padding:14px 24px;border-radius:12px;background:#229ED9;color:#fff;
+  font-family:var(--head);font-weight:600;font-size:20px;letter-spacing:.5px;text-transform:uppercase;text-decoration:none;transition:transform .15s,box-shadow .2s}
+.tg:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(34,158,217,.35)}
+.tg svg{width:22px;height:22px}
+footer{margin-top:44px;padding-bottom:8px;font-size:13px;color:var(--dim);text-align:center}
+footer a{color:var(--muted);text-decoration:none}
+
+@media (max-width:720px){
+  .about{grid-template-columns:1fr}
+  #video{padding-top:28px}
+  .btn{font-size:22px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<!-- Экран 1 -->
+<section class="screen active" id="q1" aria-labelledby="q1t">
+  <div class="steps" aria-hidden="true"><i class="on"></i><i></i></div>
+  <p class="eyebrow">/// Видео-разбор · Target Pro Camp</p>
+  <h1 class="h-xl" id="q1t">Ты точно <span class="y">таргетолог?</span></h1>
+  <div class="answers">
+    <button class="btn btn-yes" data-go="q2">Да</button>
+    <button class="btn btn-no" data-go="no">Нет</button>
+  </div>
+</section>
+
+<!-- Экран 2 -->
+<section class="screen" id="q2" aria-labelledby="q2t">
+  <div class="steps" aria-hidden="true"><i class="on"></i><i class="on"></i></div>
+  <h2 class="h-l" id="q2t">Не врёшь? <span class="y">Точно специалист</span> по таргетированной рекламе что ли?</h2>
+  <div class="answers">
+    <button class="btn btn-yes" data-go="video">Да</button>
+    <button class="btn btn-no" data-go="no">Нет</button>
+  </div>
+</section>
+
+<!-- Ответ «нет» -->
+<section class="screen" id="no" aria-labelledby="not">
+  <p class="eyebrow">/// Честность — уже плюс</p>
+  <h2 class="h-l" id="not">Тогда это видео <span class="y">не для тебя</span></h2>
+  <p class="sub">Разбор сделан для практикующих таргетологов: тех, кто уже запускает рекламу и хочет выйти на стабильный доход от $3000 в месяц.</p>
+  <button class="link" data-go="q1">Я ошибся, я таргетолог</button>
+</section>
+
+<!-- Видео -->
+<section class="screen" id="video" aria-labelledby="vt">
+  <div class="wrap">
+    <div class="vhead">
+      <p class="eyebrow">/// Видео-разбор · Рафаэль Юсупов</p>
+      <h1 class="h-l" id="vt">Как таргетологу перестать выживать на фрилансе и выйти на <span class="y">$3000+</span> в месяц</h1>
+      <p class="sub">Почему одни годами берут $200 за проект, а другие спокойно зарабатывают от $3000 с 5–6 клиентов. Разбираю на своём опыте и кейсах учеников — смотри до конца.</p>
+    </div>
+
+    <div class="player">
+      <iframe id="yt" src="https://www.youtube-nocookie.com/embed/IuOtyUV68fs?rel=0&modestbranding=1&playsinline=1"
+        title="Видео-разбор: как таргетологу выйти на $3000+" loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <div class="about">
+      <div><b>/// 001</b><p>Фундамент проекта: оффер и анализ ЦА методом «CustDev без интервью»</p></div>
+      <div><b>/// 002</b><p>5 пунктов рекламной стратегии, чтобы не сливать бюджет клиента</p></div>
+      <div><b>/// 003</b><p>Система привлечения клиентов и 16+ кейсов учеников со скринами</p></div>
+    </div>
+
+    <div class="cta-box">
+      <a class="cta" id="cta" href="#" aria-disabled="true" role="link">
+        <svg class="ic-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+        <svg class="ic-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        <span>Стратегическая сессия</span>
+      </a>
+      <p class="timer" id="timer" aria-live="polite">Кнопка откроется через <b id="left">1:30</b> — пока смотри видео</p>
+      <div class="bar" aria-hidden="true"><i id="barfill"></i></div>
+    </div>
+
+    <div class="benefits" id="benefits" aria-live="polite">
+      <h3>Что даст сессия <span class="free">Бесплатно</span></h3>
+      <ul>
+        <li>Разберём твою текущую ситуацию: проекты, чеки, где теряешь клиентов и деньги</li>
+        <li>Покажу 2–3 точки роста, которые сейчас для тебя неочевидны — взгляд со стороны</li>
+        <li>Получишь план: что сделать в ближайшие 1–2 месяца, чтобы выйти на доход от $3000</li>
+        <li>Самые выгодные условия на участие в TARGET PRO CAMP 7.0 — только для участников сессии</li>
+      </ul>
+      <p class="note">Созвон 25–30 минут. Ответь на несколько вопросов в анкете — я или мой партнёр свяжемся с тобой и согласуем время.</p>
+    </div>
+
+    <div class="help">
+      <p>Не открывается кнопка или видео? Напиши мне</p>
+      <a class="tg" id="tg" href="https://t.me/yusupov_rafael" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3 18.6 20c-.2 1.1-.9 1.4-1.8.9l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.4-5.1 9.3-8.4c.4-.4-.1-.6-.6-.2L6 13.5 1.1 12c-1.1-.3-1.1-1.1.2-1.6L20.5 3c.9-.3 1.7.2 1.4 1.3z"/></svg>
+        Написать в Telegram
+      </a>
+    </div>
+
+    <footer>Рафаэль Юсупов · таргетолог и ментор · <a href="https://www.instagram.com/rafael.traffic/" target="_blank" rel="noopener">@rafael.traffic</a></footer>
+  </div>
+</section>
+
+<script>
+(function(){
+  var FORM = 'https://rafael-yusupov.github.io/strat-sessia-rafael/';
+  var UNLOCK = 90; // секунд
+  var KEY = 'tpc_video_start';
+  var store = {
+    get:function(k){try{return localStorage.getItem(k)}catch(e){return null}},
+    set:function(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+  };
+  function track(name, custom){ if(window.fbq){ custom ? fbq('trackCustom',name) : fbq('track',name); } }
+
+  // пробрасываем UTM-метки из адреса в ссылку на форму
+  var formUrl = FORM + (location.search || '');
+
+  var timerStarted = false;
+  function show(id){
+    document.querySelectorAll('.screen').forEach(function(s){s.classList.toggle('active', s.id===id)});
+    window.scrollTo(0,0);
+    if(id==='video'){ startTimer(); }
+    if(id==='no'){ track('QuizNotTargetolog',true); }
+  }
+
+  document.querySelectorAll('[data-go]').forEach(function(b){
+    b.addEventListener('click', function(){
+      var to = b.getAttribute('data-go');
+      if(to==='q2'){ track('QuizStep1Yes',true); }
+      if(to==='video'){ store.set('tpc_passed','1'); track('ViewContent'); }
+      show(to);
+    });
+  });
+
+  var cta = document.getElementById('cta'), left = document.getElementById('left'),
+      timer = document.getElementById('timer'), bar = document.getElementById('barfill');
+
+  function unlock(animate){
+    cta.classList.add('open'); if(animate) cta.classList.add('flash');
+    cta.href = formUrl; cta.removeAttribute('aria-disabled');
+    timer.textContent = 'Кнопка открыта — оставь заявку на сессию';
+    bar.style.width = '100%';
+    document.getElementById('benefits').classList.add('show');
+    if(animate) track('CTAUnlocked',true);
+  }
+
+  function startTimer(){
+    if(timerStarted) return; timerStarted = true;
+    var start = parseInt(store.get(KEY),10);
+    if(!start){ start = Date.now(); store.set(KEY,String(start)); }
+    function tick(){
+      var passed = Math.floor((Date.now()-start)/1000), rest = Math.max(0, UNLOCK-passed);
+      left.textContent = Math.floor(rest/60)+':'+('0'+rest%60).slice(-2);
+      bar.style.width = Math.min(100, passed/UNLOCK*100)+'%';
+      if(rest<=0){ unlock(passed < UNLOCK+2); return; }
+      setTimeout(tick, 1000);
+    }
+    tick();
+  }
+
+  cta.addEventListener('click', function(e){
+    if(!cta.classList.contains('open')){
+      e.preventDefault();
+      timer.animate && timer.animate([{transform:'translateX(0)'},{transform:'translateX(-6px)'},{transform:'translateX(6px)'},{transform:'translateX(0)'}],{duration:300});
+      return;
+    }
+    track('Lead');
+    track('ClickStrategySession',true);
+  });
+
+  document.getElementById('tg').addEventListener('click', function(){ track('Contact'); });
+
+  // вернувшийся зритель, уже прошедший вопросы, сразу попадает на видео
+  if(store.get('tpc_passed')==='1'){ show('video'); }
+})();
+</script>
+</body>
+</html>
